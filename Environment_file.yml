@@ -1,0 +1,47 @@
+```yaml
+# Conda environment file for the MI-BCI Network Analysis Pipeline
+#
+# To create this environment:
+# > conda env create -f environment.yml
+#
+# To activate this environment:
+# > conda activate eeg-mi-analysis
+#
+(environment.yml)
+name: eeg-mi-analysis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  
+  # 
+ MNE Ecosystem 
+
+  - mne               # Core EEG/MEG analysis
+  - mne-bids          # For reading BIDS data
+  - mne-connectivity  # For PLV, Coherence, Granger
+  
+  # 
+ Machine Learning 
+
+  - scikit-learn      # For CSP, LDA, SVM, RF, pipelines
+  
+  # 
+ Network Science 
+
+  - bctpy             # Brain Connectivity Toolbox (Graph Theory, NBS)
+  - networkx          # For graph visualization
+  
+  # 
+ Core Scientific Stack 
+
+  - numpy             # Array operations
+  - scipy             # Scientific/statistical functions
+  - pandas            # Data handling (CSV files, results)
+  - matplotlib        # Plotting
+  
+  # 
+ Utilities 
+
+  - pip
